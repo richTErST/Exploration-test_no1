@@ -1,0 +1,58 @@
+1. #GOAL AND STEP OF IT'S IMPLEMENTATION: 
+Verification of the correctness of the search engine's operation in https://forum.trojmiasto.pl/
+-------------------------------------------------- -----------------------
+2. #TESTER:
+Wojciech Richter
+-------------------------------------------------- -----------------------
+3. #START:
+02/04/2019
+-------------------------------------------------- -----------------------
+4. # DURATION:
+45min
+-------------------------------------------------- -----------------------
+5. # ENVIRONMENT:
+Google Chrome
+-------------------------------------------------- -----------------------
+6. #SYSTEM INFORMATION
+ Time of this report: 4/2/2019, 19:33:06
+               Operating System: Windows 10 Home 64-bit (10.0, Build 17134) (17134.rs4_release.180410-1804)
+                 Language: English (Regional Setting: Polish)
+      System Manufacturer: Dell Inc.
+             System Model: Inspiron 5770
+                     BIOS: 1.1.8 (type: UEFI)
+                Processor: Intel (R) Core (TM) i7-8550U CPU @ 1.80GHz (8 CPUs), ~ 2.0GHz
+                   Memory: 8192MB RAM
+      Available OS Memory: 8090MB RAM
+                Page File: 7989MB used, 2404MB available
+              Windows Dir: C: \ WINDOWS
+          DirectX Version: DirectX 12
+      DX Setup Parameters: Not found
+         User DPI Setting: 96 DPI (100 percent)
+       DPI Setting System: 96 DPI (100 percent)
+          DWM DPI Scaling: Disabled
+                 Miracast: Available, with HDCP
+Microsoft Graphics Hybrid: Supported
+           DxDiag Version: 10.00.17134.0001 64bit Unicode
+-------------------------------------------------- -----------------------
+7. #AREA
+- Phrase search using standard, correct strings
+- Sorting by "trafnoœæ" and "czasu"
+- Search for special characters
+- Verification of html code search
+- Verification of searches in another specific language - cyrillic
+-------------------------------------------------- -----------------------
+8. #GENERAL NOTES:
+- When entering the "noga", "mama" in the browser, topics with the word "nog¹", "mam¹" are displayed
+- When entering characters in a lowercase letter "hh" displays the results for "HH"
+-------------------------------------------------- -----------------------
+9. #DEFECTS:
+- badly sorted results. After setting the advanced search, enter the phrase "oddam" and set the date of adding "w ci¹gu tygodnia" and "sortuj wed³ug czasu". (b1)
+- If you enter "! S" or "@ 222", it displays an invalid list, including when searching in the title (b2)
+- Too long html-like text crashes the server and resets the connection (b3)
+- Too long text in a specific language - Cyrillic will cause the server error and reset the connection (b4)
+-------------------------------------------------- -----------------------
+10. #DISCOVERIES:
+
+
+-------------------------------------------------- -----------------------
+11. # ATTACHMENTS
